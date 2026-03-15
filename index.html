@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Blood Availability Finder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🔥 SPLASH SCREEN -->
+<div id="splash">
+    <img src="logo.png" id="logo">
+    <h2>Smart Blood Finder</h2>
+</div>
+
+<!-- 🔴 MAIN APP -->
+<div id="app">
+
+<h2 class="title">🩸 Smart Blood  Finder 🩸</h2>
+
+<!-- ADD DONOR -->
+<div class="card">
+<h3>Add Donor</h3>
+
+<input id="name" placeholder="Your Name">
+<input id="phone" placeholder="Phone Number">
+<input id="location" placeholder="Location">
+<select id="group">
+<option>O+</option><option>O-</option>
+<option>A+</option><option>A-</option>
+<option>B+</option><option>B-</option>
+<option>AB+</option><option>AB-</option>
+</select>
+<input id="units" type="number" placeholder="Blood Units">
+
+<button onclick="addDonor()">Add Donor</button>
+</div>
+
+<!-- SEARCH -->
+<div class="card">
+<h3>Search Blood</h3>
+
+<select id="searchGroup">
+<option>O+</option><option>O-</option>
+<option>A+</option><option>A-</option>
+<option>B+</option><option>B-</option>
+<option>AB+</option><option>AB-</option>
+</select>
+
+<button onclick="searchBlood()">Search</button>
+
+<p id="total"></p>
+<div id="results"></div>
+</div>
+
+<!-- EMERGENCY -->
+<div class="card">
+<h3>🚨 Emergency Request</h3>
+<input id="emGroup" placeholder="Blood Group">
+<input id="emHospital" placeholder="Hospital Name">
+<input id="emLocation" placeholder="Location">
+<button onclick="sendEmergency()">Send Emergency Alert</button>
+<div id="alertBox"></div>
+</div>
+
+<!-- LOCATION -->
+<div class="card">
+<h3>📍 Your Location</h3>
+<button onclick="getLocation()">Get My Location</button>
+<p id="myLocation"></p>
+</div>
+
+<!-- HOSPITAL -->
+<div class="card">
+<h3>🏥 Nearby Hospitals</h3>
+<button onclick="findHospitals()">Find Hospitals</button>
+<div id="hospitals"></div>
+</div>
+
+<footer>Devloped by M.W💙</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
